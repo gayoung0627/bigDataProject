@@ -79,9 +79,9 @@ plt.ylim(0, 100000)
 plt.show()
 
 # 절도
-fraudulent_crimes = df[df['범죄중분류'] == '절도']
+theft_crimes = df[df['범죄중분류'] == '절도']
 
-region_counts = fraudulent_crimes.loc[:, '서울':'세종'].sum()
+region_counts = theft_crimes.loc[:, '서울':'세종'].sum()
 
 top_regions = region_counts.nlargest(4)
 
